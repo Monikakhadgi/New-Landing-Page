@@ -48,7 +48,7 @@ export default function Home() {
             TAKE CONTROL OVER YOUR GAMING EXPERINCES.
           </Typography>
           <Grid className={classes.signUpBtnn}>
-            <img src={signUpBtn} />
+          <a href='https://joynr-test.herokuapp.com/signin' target='_blank'> <img src={signUpBtn} /></a>
           </Grid>
         </Grid>
       </Grid>
@@ -173,6 +173,7 @@ export default function Home() {
             </Typography>
           </Grid>
           <Grid item className={classes.startCreating}>
+            <Grid className={classes.startCreatingImg}>
             <img
               className={classes.leftRoundImg}
               src={leftRoundImg}
@@ -188,6 +189,7 @@ export default function Home() {
               src={RightRoundImg}
               alt="Start Creating"
             />
+            </Grid>
             <Typography className={classes.roundBackgroundText}>
               3. Start creating <br /> your team!{" "}
             </Typography>
@@ -204,9 +206,9 @@ export default function Home() {
             together to create their optimal gamaing experience.
           </Typography>
           <Grid className={classes.signUpBtnGrid}>
-            <button onclick="signUp()" className={classes.signUpBtn}>
+           <a href='https://joynr-test.herokuapp.com/signin' target='_blank' className={classes.signUpBtn}>
               SIGN UP
-            </button>
+              </a>
           </Grid>
         </Grid>
       </Grid>
@@ -312,9 +314,10 @@ const useStyles = makeStyles((theme) => ({
     position: "absolute",
     fontFamily: "DM Sans",
   },
-  signUpBtnn: {
+  signUpBtn: {
     fontFamily: "DM Sans",
     paddingTop: "2em",
+    textDecoration: "none"
   },
   h2: {
     fontFamily: "DM Sans",
@@ -444,6 +447,14 @@ const useStyles = makeStyles((theme) => ({
   signUpImg: {
     borderRadius: "50%",
   },
+  startCreatingImg:{
+    backgroundImage: "url(" + RoundBackground + ")",
+    width:"250px",
+    height:'250px',
+    overflow:'hidden',
+    transform: "scale(0.8)",
+
+  },
 
   RoundBackground: {
     display: "flex",
@@ -549,9 +560,10 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "bold",
     border: "none",
     backgroundColor: "white",
-    color: "#black",
+    color: "black",
     cursor: "pointer",
     transition: "all 200ms",
+    textDecoration: "none"
   },
 
   privacyLink: {
